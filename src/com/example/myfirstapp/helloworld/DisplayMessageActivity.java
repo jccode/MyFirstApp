@@ -1,4 +1,7 @@
-package com.example.myfirstapp;
+package com.example.myfirstapp.helloworld;
+
+import com.example.myfirstapp.R;
+import com.example.myfirstapp.R.menu;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -17,7 +20,7 @@ public class DisplayMessageActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+		String message = intent.getStringExtra(HelloWorldActivity.EXTRA_MESSAGE);
 		
 		TextView textView = new TextView(this);
 		textView.setTextSize(40);
@@ -26,7 +29,7 @@ public class DisplayMessageActivity extends Activity {
 		setContentView(textView);
 		//setContentView(R.layout.activity_display_message);
 		// Show the Up button in the action bar.
-		//setupActionBar();
+		setupActionBar();
 	}
 
 	/**

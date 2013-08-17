@@ -161,6 +161,9 @@ public class MainActivity extends ActionBarActivity {
 			case 2:
 				fragment = new ActionBarFragment();
 				break;
+			case 3:
+				fragment = new FragmentLayout();
+				break;
 			default:
 				;
 		}

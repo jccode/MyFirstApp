@@ -55,6 +55,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myfirstapp.MainActivity" />
         </activity>
+        <activity android:name="com.example.myfirstapp.FragmentLayout$DetailsActivity"
+            android:label="@string/title_activity_fragment_layout_details"
+            android:parentActivityName="com.example.myfirstapp.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        
     </application>
 
 </manifest>

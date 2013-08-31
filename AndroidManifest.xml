@@ -8,6 +8,11 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="17" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -16,7 +21,7 @@
         <activity
             android:name="com.example.myfirstapp.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" > <!-- .DarkActionBar -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,14 +60,23 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myfirstapp.MainActivity" />
         </activity>
-        <activity android:name="com.example.myfirstapp.FragmentLayout$DetailsActivity"
+        <activity
+            android:name="com.example.myfirstapp.FragmentLayout$DetailsActivity"
             android:label="@string/title_activity_fragment_layout_details"
-            android:parentActivityName="com.example.myfirstapp.MainActivity">
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myfirstapp.MainActivity" />
         </activity>
-        
+        <activity
+            android:name="com.example.myfirstapp.bitmap.ImageDetailActivity"
+            android:label="@string/title_activity_image_detail"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" 
+            android:theme="@style/FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -12,30 +12,36 @@
     <string name="button_swipe_view_demo">SwipeViewDemo</string>
     <string name="button_drawer_demo">DrawerDemo</string>
     <string name="title_activity_drawer_demo">DrawerDemoActivity</string>
+
     <string-array name="planets_array">
         <item>SendMessage</item>
         <item>SwipeDemo</item>
         <item>ActionBar</item>
         <item>Fragment</item>
-        <item>Jupiter</item>
+        <item>Bitmap</item>
         <item>Saturn</item>
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
-    
+
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-    
+
     <string-array name="nav_spinner">
         <item>item1</item>
         <item>item2</item>
         <item>item3</item>
     </string-array>
-    
+
     <string name="content_actionbar_textview">Here is the Actionbar test fragment</string>
     <string name="action_search">search</string>
     <string name="action_send">send</string>
     <string name="action_mail">mail</string>
-
     <string name="title_activity_fragment_layout_details">Details</string>
+    <string name="no_network_connection_toast">No network connection found</string>
+    <string name="clear_cache_menu">Clear Caches</string>
+    <string name="clear_cache_complete_toast">Caches have been cleared</string>
+    <string name="title_activity_image_detail">ImageDetailActivity</string>
+    <string name="action_set_wallpaper">Set wallpaper</string>
+	<string name="imageview_description">Image Thumbnail</string>
 </resources>

@@ -18,6 +18,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.example.myfirstapp.actionbar.ActionBarFragment;
+import com.example.myfirstapp.bitmap.BitmapFragment;
 import com.example.myfirstapp.helloworld.HelloWorldFragment;
 import com.example.myfirstapp.swipedemo.CollectionDemoFragment;
 
@@ -163,6 +164,9 @@ public class MainActivity extends ActionBarActivity {
 				break;
 			case 3:
 				fragment = new FragmentLayout();
+				break;
+			case 4:
+				fragment = new BitmapFragment();
 				break;
 			default:
 				;

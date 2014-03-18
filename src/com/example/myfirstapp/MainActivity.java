@@ -4,7 +4,6 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v4.app.ActionBarDrawerToggle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -20,6 +19,9 @@ import android.widget.ListView;
 import com.example.myfirstapp.actionbar.ActionBarFragment;
 import com.example.myfirstapp.bitmap.BitmapFragment;
 import com.example.myfirstapp.helloworld.HelloWorldFragment;
+import com.example.myfirstapp.killps.KillPsFragment;
+import com.example.myfirstapp.listviewtutorial.ListViewTutorialFragment;
+import com.example.myfirstapp.password.PwFragment;
 import com.example.myfirstapp.swipedemo.CollectionDemoFragment;
 
 public class MainActivity extends ActionBarActivity {
@@ -167,6 +169,15 @@ public class MainActivity extends ActionBarActivity {
 				break;
 			case 4:
 				fragment = new BitmapFragment();
+				break;
+			case 5:
+				fragment = new PwFragment();
+				break;
+			case 6:
+				fragment = new KillPsFragment();
+				break;
+			case 7:
+				fragment = new ListViewTutorialFragment();
 				break;
 			default:
 				;

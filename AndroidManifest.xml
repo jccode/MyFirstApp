@@ -71,8 +71,24 @@
         <activity
             android:name="com.example.myfirstapp.bitmap.ImageDetailActivity"
             android:label="@string/title_activity_image_detail"
-            android:parentActivityName="com.example.myfirstapp.MainActivity" 
+            android:parentActivityName="com.example.myfirstapp.MainActivity"
             android:theme="@style/FullScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ListWithArrayAdapter1"
+            android:label="@string/title_listview_with_array_adapter"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ListWithCustomAdapter"
+            android:label="@string/title_activity_list_with_custom_adapter"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myfirstapp.MainActivity" />

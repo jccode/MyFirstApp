@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    	<string-array name="kill_ps_app_names">
+	    <item name="wechat">微信</item>
+	    <item name="alipay">支付宝钱包</item>
+	    <item name="ttpod">天天动听</item>
+	    <item name="qq">QQ</item>
+	    <item name="momo">陌陌</item>
+	</string-array>
+	<string-array name="kill_ps_app_packages">
+	    <item name="wechat">com.tencent.mm</item>
+	    <item name="alipay">com.eg.android.AlipayGphone</item>
+	    <item name="ttpod">com.sds.android.ttpod</item>
+	    <item name="qq">com.tencent.mobileqq</item>
+	    <item name="momo">com.immomo.momo</item>
+	</string-array>
+	
+</resources>

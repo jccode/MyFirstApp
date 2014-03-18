@@ -19,9 +19,9 @@
         <item>ActionBar</item>
         <item>Fragment</item>
         <item>Bitmap</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
+        <item>pwde</item>
+        <item>Kill</item>
+        <item>Listview tutorial</item>
     </string-array>
 
     <string name="drawer_open">Open navigation drawer</string>
@@ -43,5 +43,26 @@
     <string name="clear_cache_complete_toast">Caches have been cleared</string>
     <string name="title_activity_image_detail">ImageDetailActivity</string>
     <string name="action_set_wallpaper">Set wallpaper</string>
-	<string name="imageview_description">Image Thumbnail</string>
+    <string name="imageview_description">Image Thumbnail</string>
+    <string name="btn_kill">Kill</string>
+
+    <string-array name="kill_ps_app_names">
+        <item name="wechat">WeChat</item>
+        <item name="alipay">AliPay</item>
+        <item name="ttpod">TTPod</item>
+        <item name="qq">QQ</item>
+        <item name="momo">MOMO</item>
+    </string-array>
+    <string-array name="kill_ps_app_packages">
+        <item name="wechat">com.tencent.mm</item>
+        <item name="alipay">com.eg.android.AlipayGphone</item>
+        <item name="ttpod">com.sds.android.ttpod</item>
+        <item name="qq">com.tencent.mobileqq</item>
+        <item name="momo">com.immomo.momo</item>
+    </string-array>
+
+    <string name="btn_listview_with_array_adapter">ListView with ArrayAdapter</string>
+    <string name="title_listview_with_array_adapter">ListView with ArrayAdapter</string>
+    <string name="title_activity_list_with_custom_adapter">ListWithCustomAdapter</string>
+	<string name="btn_listview_with_custom_adapter">ListView with custom Adapter</string>
 </resources>

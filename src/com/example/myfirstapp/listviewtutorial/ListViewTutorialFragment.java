@@ -2,16 +2,58 @@ package com.example.myfirstapp.listviewtutorial;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
+import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-import com.example.myfirstapp.R;
 
+public class ListViewTutorialFragment extends ListFragment {
+	
+	final String[] values = new String[] {"ListView with ArrayAdapter", "ListView with custom Adapter", 
+			"Multiple choice List", "Single choice List"};
+
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, values);
+		setListAdapter(adapter);
+	}
+	
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+		String className = "com.example.myfirstapp.listviewtutorial.ex.";
+		switch (position) {
+		case 0:
+			className += "ListWithArrayAdapter1";
+			break;
+		case 1:
+			className += "ListWithCustomAdapter";
+			break;
+		case 2:
+			className += "MultipleChoiceListActivity";
+			break;
+		case 3:
+			className += "SingleChoiceListActivity";
+			break;
+		default:
+			className = null;
+			break;
+		}
+		
+		if (className != null) {
+			try {
+				Intent intent = new Intent(this.getActivity(),
+						Class.forName(className));
+				startActivity(intent);
+			} catch (ClassNotFoundException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}
+
+/*
 public class ListViewTutorialFragment extends Fragment implements OnClickListener {
 
 	@Override
@@ -65,3 +107,5 @@ public class ListViewTutorialFragment extends Fragment implements OnClickListene
 	}
 
 }
+*/
+

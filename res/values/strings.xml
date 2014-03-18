@@ -61,8 +61,12 @@
         <item name="momo">com.immomo.momo</item>
     </string-array>
 
-    <string name="btn_listview_with_array_adapter">ListView with ArrayAdapter</string>
     <string name="title_listview_with_array_adapter">ListView with ArrayAdapter</string>
     <string name="title_activity_list_with_custom_adapter">ListWithCustomAdapter</string>
-	<string name="btn_listview_with_custom_adapter">ListView with custom Adapter</string>
+    <string name="btn_listview_with_array_adapter">ListView with ArrayAdapter</string>
+    <string name="btn_listview_with_custom_adapter">ListView with custom Adapter</string>
+    <string name="title_activity_mult_and_single_choice_list">MultAndSingleChoiceListActivity</string>
+    <string name="action_toggle">Toggle</string>
+    <string name="title_activity_single_choice_list">SingleChoiceListActivity</string>
+
 </resources>

@@ -93,6 +93,22 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.myfirstapp.MainActivity" />
         </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.MultipleChoiceListActivity"
+            android:label="@string/title_activity_mult_and_single_choice_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.SingleChoiceListActivity"
+            android:label="@string/title_activity_single_choice_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

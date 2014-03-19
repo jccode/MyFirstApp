@@ -68,5 +68,17 @@
     <string name="title_activity_mult_and_single_choice_list">MultAndSingleChoiceListActivity</string>
     <string name="action_toggle">Toggle</string>
     <string name="title_activity_single_choice_list">SingleChoiceListActivity</string>
+    <string name="title_activity_contextual_action_list">ContextualActionListActivity</string>
+    <string name="row_select_menu_item1">item1</string>
+    <string name="title_activity_undo_demo">UndoDemoActivity</string>
+    <string name="text_undo_demo">Deleted</string>
+    <string name="btn_undo_demo">Undo</string>
+    <string name="action_undo_demo_delete">Delete</string>
+    <string name="title_activity_two_items_list">TwoItemsListActivity</string>
+    <string name="title_activity_model_and_row_interaction">ModelAndRowInteractionActivity</string>
+    <string name="model_row_interact_label">Label</string>
+    <string name="title_activity_expandable_list">ExpandableListActivity</string>
+    <string name="title_activity_list_view_with_header_and_footer">ListViewWithHeaderAndFooterActivity</string>
+    <string name="title_activity_simple_cursor_adapter">SimpleCursorAdapterActivity</string>
 
 </resources>

@@ -1,28 +1,33 @@
 package com.example.myfirstapp.listviewtutorial.ex;
 
-import com.example.myfirstapp.R;
-
-import android.app.ListActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
-public class SingleChoiceListActivity extends ListActivity {
+import com.example.myfirstapp.R;
+
+public class UndoDemoActivity extends Activity {
+	
+	private View undobarContainer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_undo_demo);
 		setupActionBar();
+		String[] values = new String[] { "Ubuntu", "Android", "iPhone",
+		        "Windows", "Ubuntu", "Android", "iPhone", "Windows" };
+		ListView l = (ListView) findViewById(R.id.undo_demo_listview);
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, values);
+		l.setAdapter(adapter);
 		
-		String[] values = new String[] { "a", "b", "c", "d", "e", "f", "g",
-		        "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-		        "t", "u", "w", "x", "y", "z" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, values);
-		setListAdapter(adapter);
-		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		undobarContainer = findViewById(R.id.undo_demo_undobar);
 	}
 
 	/**
@@ -37,7 +42,7 @@ public class SingleChoiceListActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.single_choice_list, menu);
+		getMenuInflater().inflate(R.menu.undo_demo, menu);
 		return true;
 	}
 
@@ -54,8 +59,29 @@ public class SingleChoiceListActivity extends ListActivity {
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+			
+		case R.id.action_undo_demo_delete:
+			showUndoBar();
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
 
+	private void showUndoBar() {
+		undobarContainer.setVisibility(View.VISIBLE);
+		undobarContainer.setAlpha(1);
+		undobarContainer.animate().alpha(0.4f).setDuration(5000)
+			.withEndAction(new Runnable() {
+				
+				@Override
+				public void run() {
+					undobarContainer.setVisibility(View.GONE);
+				}
+			});
+	}
+
+	public void onClick(View view) {
+		Toast.makeText(this, "Deletion undone", Toast.LENGTH_SHORT).show();
+		undobarContainer.setVisibility(View.GONE);
+	}
 }

@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -21,7 +22,9 @@
         <activity
             android:name="com.example.myfirstapp.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" > <!-- .DarkActionBar -->
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+
+            <!-- .DarkActionBar -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -104,6 +107,62 @@
         <activity
             android:name="com.example.myfirstapp.listviewtutorial.ex.SingleChoiceListActivity"
             android:label="@string/title_activity_single_choice_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ContextualActionListActivity"
+            android:label="@string/title_activity_contextual_action_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.UndoDemoActivity"
+            android:label="@string/title_activity_undo_demo"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.TwoItemsListActivity"
+            android:label="@string/title_activity_two_items_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ModelAndRowInteractionActivity"
+            android:label="@string/title_activity_model_and_row_interaction"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ExpandableListActivity"
+            android:label="@string/title_activity_expandable_list"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.ListViewWithHeaderAndFooterActivity"
+            android:label="@string/title_activity_list_view_with_header_and_footer"
+            android:parentActivityName="com.example.myfirstapp.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.myfirstapp.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.myfirstapp.listviewtutorial.ex.SimpleCursorAdapterActivity"
+            android:label="@string/title_activity_simple_cursor_adapter"
             android:parentActivityName="com.example.myfirstapp.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

@@ -1,7 +1,5 @@
 package com.example.myfirstapp.listviewtutorial.ex;
 
-import com.example.myfirstapp.R;
-
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -9,20 +7,31 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
-public class SingleChoiceListActivity extends ListActivity {
+import com.example.myfirstapp.R;
+
+public class ListViewWithHeaderAndFooterActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setupActionBar();
 		
-		String[] values = new String[] { "a", "b", "c", "d", "e", "f", "g",
-		        "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-		        "t", "u", "w", "x", "y", "z" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, values);
-		setListAdapter(adapter);
-		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+		String[] names = new String[] { "Linux", "Windows7", "Eclipse", "Suse",
+		        "Ubuntu", "Solaris", "Android", "iPhone", "Linux", "Windows7",
+		        "Eclipse", "Suse", "Ubuntu", "Solaris", "Android", "iPhone" };
+		
+		TextView header = new TextView(this);
+		header.setText("header");
+		TextView footer = new TextView(this);
+		footer.setText("footer");
+		
+		ListView listView = getListView();
+		listView.addHeaderView(header);
+		listView.addFooterView(footer);
+		
+		setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, names));
 	}
 
 	/**
@@ -37,7 +46,8 @@ public class SingleChoiceListActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.single_choice_list, menu);
+		getMenuInflater()
+				.inflate(R.menu.list_view_with_header_and_footer, menu);
 		return true;
 	}
 

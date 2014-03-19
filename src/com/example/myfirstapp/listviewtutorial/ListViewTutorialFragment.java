@@ -11,7 +11,9 @@ import android.widget.ListView;
 public class ListViewTutorialFragment extends ListFragment {
 	
 	final String[] values = new String[] {"ListView with ArrayAdapter", "ListView with custom Adapter", 
-			"Multiple choice List", "Single choice List"};
+			"Multiple choice List", "Single choice List", "Contextual action mode for ListView", 
+			"Undo Action", "Two items in ListView", "Model and rows interaction", "Expandable List", 
+			"List with header and footer", "simple cursor adapter"};
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -35,6 +37,27 @@ public class ListViewTutorialFragment extends ListFragment {
 			break;
 		case 3:
 			className += "SingleChoiceListActivity";
+			break;
+		case 4:
+			className += "ContextualActionListActivity";
+			break;
+		case 5:
+			className += "UndoDemoActivity";
+			break;
+		case 6:
+			className += "TwoItemsListActivity";
+			break;
+		case 7:
+			className += "ModelAndRowInteractionActivity";
+			break;
+		case 8:
+			className += "ExpandableListActivity";
+			break;
+		case 9:
+			className += "ListViewWithHeaderAndFooterActivity";
+			break;
+		case 10:
+			className += "SimpleCursorAdapterActivity";
 			break;
 		default:
 			className = null;

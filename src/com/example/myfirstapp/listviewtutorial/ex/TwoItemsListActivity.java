@@ -1,28 +1,45 @@
 package com.example.myfirstapp.listviewtutorial.ex;
 
-import com.example.myfirstapp.R;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.widget.SimpleAdapter;
 
-public class SingleChoiceListActivity extends ListActivity {
+import com.example.myfirstapp.R;
+
+public class TwoItemsListActivity extends ListActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setupActionBar();
 		
-		String[] values = new String[] { "a", "b", "c", "d", "e", "f", "g",
-		        "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s",
-		        "t", "u", "w", "x", "y", "z" };
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_single_choice, values);
+		ArrayList<Map<String, String>> list = buildData();
+		String[] from = {"name", "purpose"};
+		int[] to = {android.R.id.text1, android.R.id.text2};
+		SimpleAdapter adapter = new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, from, to);
 		setListAdapter(adapter);
-		getListView().setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+	}
+
+	private ArrayList<Map<String, String>> buildData() {
+		ArrayList<Map<String, String>> list = new ArrayList<Map<String,String>>();
+		list.add(putData("Android", "Mobile"));
+		list.add(putData("Windows7", "Windows7"));
+		list.add(putData("iPhone", "iPhone"));
+		return list;
+	}
+
+	private Map<String, String> putData(String name, String purpose) {
+		Map<String, String> item = new HashMap<String, String>();
+		item.put("name", name);
+		item.put("purpose", purpose);
+		return item;
 	}
 
 	/**
@@ -37,7 +54,7 @@ public class SingleChoiceListActivity extends ListActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.single_choice_list, menu);
+		getMenuInflater().inflate(R.menu.two_items_list, menu);
 		return true;
 	}
 

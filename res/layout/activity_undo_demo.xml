@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView 
+            android:id="@+id/undo_demo_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/undo_demo_undobar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="20dp"
+        android:alpha="100"
+        android:background="@color/bg_undo_demo_bar"
+        android:dividerPadding="11dp"
+        android:padding="4dp">
+        
+        <TextView 
+            android:id="@+id/undo_demo_undobar_message"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/text_undo_demo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            />
+        
+        <Button 
+            android:id="@+id/undo_demo_undobar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@color/bg_undo_demo_bar"
+            android:drawableLeft="@drawable/ic_undo"
+            android:text="@string/btn_undo_demo"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:onClick="onClick"
+            
+            />
+        
+    </LinearLayout>
+</FrameLayout>
